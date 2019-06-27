@@ -43,7 +43,6 @@ canvas.onmousemove = function(a) {
             lastPoint = newPoint
         }
     }
-    
 }
 
 canvas.onmouseup = function() {
