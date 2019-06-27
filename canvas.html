@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>canvas</title>
+    <style>
+        #canvas {
+            background: rgb(248, 248, 248);
+        }
+        body {
+            margin: 0;
+        }
+        button {
+            border-radius: 4px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to bottom, #ebe8e8 0%, #e6e3e3 100%);
+            border: 1px solid #6e6d6d;
+            color: #0c0c0c;
+        }
+        .actions {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+        .actions > #brush {
+            display: none;
+        }
+        .actions.x > #brush {
+            display: inline-block;
+        }
+        .actions.x > #eraser {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="actions" class="actions x">
+        <button id="eraser">橡皮擦</button>
+        <button id="brush">画笔</button>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
