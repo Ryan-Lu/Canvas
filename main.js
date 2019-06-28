@@ -63,8 +63,6 @@ save.onclick = function() {
     var a = document.createElement('a')
     document.body.appendChild(a)
     a.href = url
-    // context.fillStyle = '#fff'
-    // context.fillRect(0, 0, canvas.width, canvas.height)
     a.download = "我的画"
     a.target = '_blank'
      
