@@ -1,6 +1,7 @@
 // 控制画板
 var canvas = document.getElementById("canvas")
 var context = canvas.getContext("2d")
+var lineWidth = 3
 
 var pageSize = function() {
     var pageWidth = document.documentElement.clientWidth
@@ -21,7 +22,7 @@ var lastPoint = {x:undefined, y:undefined}
 var drawLine = function(x1, y1, x2, y2) {
     context.beginPath()
     context.moveTo(x1, y1)
-    context.lineWidth = 2
+    context.lineWidth = lineWidth
     context.lineTo(x2, y2)
     context.stroke()
     context.closePath()
@@ -41,6 +42,14 @@ pen.onclick = function() {
     eraser.classList.remove('active')
 }
 
+
+// 清空按钮
+clear.onclick = function() {
+    context.clearRect(0, 0, canvas.width, canvas.height)
+}
+
+
+// 选择颜色
 black.onclick = function() {
     context.fillStyle = 'black'
     context.strokeStyle = 'black'
@@ -85,6 +94,15 @@ blue.onclick = function() {
     green.classList.remove('active')
     yellow.classList.remove('active')
     black.classList.remove('active')
+}
+
+
+//画笔粗细
+thin.onclick = function() {
+    lineWidth = 3
+}
+thick.onclick = function() {
+    lineWidth = 6
 }
 
 

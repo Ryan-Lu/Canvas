@@ -38,6 +38,9 @@ button {
 #eraser {
     width: 22px;
 }
+#clear {
+    width: 22px;
+}
 
 .actions svg.active {
     fill: #222222;
@@ -84,4 +87,22 @@ button {
     /* 放大1.1倍 */
     transform: scale(1.1);
     /* 过渡动画 */
+}
+.sizes {
+    position: fixed;
+    right: 15px;
+    top: 10px;
+}
+.sizes > li {
+    margin: 10px;
+}
+.sizes > .thin {
+    width: 30px;
+    height: 0;
+    border-top: 3px solid black;
+}
+.sizes > .thick {
+    width: 30px;
+    height: 0;
+    border-top: 5px solid black;
 }
