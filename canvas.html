@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <!-- 使网页在手机端等比缩放 (meta:vp) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//at.alicdn.com/t/font_1266450_rierm79sdq.js"></script>
     <title>canvas</title>
     <style>
         #canvas {
@@ -21,8 +22,22 @@
         }
         .actions {
             position: fixed;
-            bottom: 0;
+            top: 0;
             left: 0;
+            padding: 10px;
+        }
+        .actions svg {
+            width: 1.5em;
+            height: 1.5em;
+            fill:#8b8b8b;
+            transition: all 0.2s;
+            margin: 5px;
+        }
+        #pen {
+            width: 1.3em;
+        }
+        #eraser {
+            width: 22px;
         }
         .actions > #brush {
             display: none;
@@ -33,13 +48,31 @@
         .actions.x > #eraser {
             display: none;
         }
+        .actions svg.active {
+            fill: #222222;
+            transform: scale(1.1);
+        }
+    </style>
+    <style type="text/css">
+        .icon {
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
     </style>
 </head>
 <body>
     <canvas id="canvas"></canvas>
     <div id="actions" class="actions">
-        <button id="eraser">橡皮擦</button>
-        <button id="brush">画笔</button>
+            <svg class="icon active" id="pen" aria-hidden="true">
+                <use xlink:href="#icon-pen"></use>
+            </svg>
+            <svg class="icon" id="eraser" aria-hidden="true">
+                <use xlink:href="#icon-Eraser-Tool"></use>
+            </svg>
+        <!-- <button id="eraser">橡皮擦</button>
+        <button id="brush">画笔</button> -->
     </div>
     <script src="./main.js"></script>
 </body>

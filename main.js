@@ -31,11 +31,13 @@ var drawLine = function(x1, y1, x2, y2) {
 var eraserEnabled = false
 eraser.onclick = function() {
     eraserEnabled = true
-    actions.className = "actions x"
+    eraser.classList.add('active')
+    pen.classList.remove('active')
 }
-brush.onclick = function() {
+pen.onclick = function() {
     eraserEnabled = false
-    actions.className = "actions"
+    pen.classList.add('active')
+    eraser.classList.remove('active')
 }
 
 
