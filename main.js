@@ -3,6 +3,10 @@ var canvas = document.getElementById("canvas")
 var context = canvas.getContext("2d")
 var lineWidth = 3
 
+
+
+
+
 var pageSize = function() {
     var pageWidth = document.documentElement.clientWidth
     var pageHeight = document.documentElement.clientHeight
@@ -14,6 +18,7 @@ pageSize()
 window.onresize = function() {
     pageSize()
 }
+
 
 // 控制鼠标
 var using = false
@@ -46,6 +51,21 @@ pen.onclick = function() {
 // 清空按钮
 clear.onclick = function() {
     context.clearRect(0, 0, canvas.width, canvas.height)
+}
+
+
+// 保存按钮
+save.onclick = function() {
+    var url = canvas.toDataURL("image/png")
+    var a = document.createElement('a')
+    document.body.appendChild(a)
+    a.href = url
+    // context.fillStyle = '#fff'
+    // context.fillRect(0, 0, canvas.width, canvas.height)
+    a.download = "我的画"
+    a.target = '_blank'
+     
+    a.click()
 }
 
 
