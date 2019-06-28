@@ -40,6 +40,52 @@ pen.onclick = function() {
     eraser.classList.remove('active')
 }
 
+black.onclick = function() {
+    context.fillStyle = 'black'
+    context.strokeStyle = 'black'
+    black.classList.add('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    yellow.classList.remove('active')
+    blue.classList.remove('active')
+}
+red.onclick = function() {
+    context.fillStyle = 'red'
+    context.strokeStyle = 'red'
+    red.classList.add('active')
+    black.classList.remove('active')
+    green.classList.remove('active')
+    yellow.classList.remove('active')
+    blue.classList.remove('active')
+}
+green.onclick = function() {
+    context.fillStyle = 'green'
+    context.strokeStyle = 'green'
+    green.classList.add('active')
+    red.classList.remove('active')
+    black.classList.remove('active')
+    yellow.classList.remove('active')
+    blue.classList.remove('active')
+}
+yellow.onclick = function() {
+    context.fillStyle = 'yellow'
+    context.strokeStyle = 'yellow'
+    yellow.classList.add('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    black.classList.remove('active')
+    blue.classList.remove('active')
+}
+blue.onclick = function() {
+    context.fillStyle = 'blue'
+    context.strokeStyle = 'blue'
+    blue.classList.add('active')
+    red.classList.remove('active')
+    green.classList.remove('active')
+    yellow.classList.remove('active')
+    black.classList.remove('active')
+}
+
 
 // 特性检测
 if (document.body.ontouchstart !== undefined) {

@@ -5,62 +5,8 @@
     <!-- 使网页在手机端等比缩放 (meta:vp) -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//at.alicdn.com/t/font_1266450_rierm79sdq.js"></script>
+    <link rel="stylesheet" href="./style.css">
     <title>canvas</title>
-    <style>
-        #canvas {
-            background: rgb(248, 248, 248);
-        }
-        body {
-            margin: 0;
-        }
-        button {
-            border-radius: 4px;
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(to bottom, #ebe8e8 0%, #e6e3e3 100%);
-            border: 1px solid #6e6d6d;
-            color: #0c0c0c;
-        }
-        .actions {
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 10px;
-        }
-        .actions svg {
-            width: 1.5em;
-            height: 1.5em;
-            fill:#8b8b8b;
-            transition: all 0.2s;
-            margin: 5px;
-        }
-        #pen {
-            width: 1.3em;
-        }
-        #eraser {
-            width: 22px;
-        }
-        .actions > #brush {
-            display: none;
-        }
-        .actions.x > #brush {
-            display: inline-block;
-        }
-        .actions.x > #eraser {
-            display: none;
-        }
-        .actions svg.active {
-            fill: #222222;
-            transform: scale(1.1);
-        }
-    </style>
-    <style type="text/css">
-        .icon {
-           width: 1em; height: 1em;
-           vertical-align: -0.15em;
-           fill: currentColor;
-           overflow: hidden;
-        }
-    </style>
 </head>
 <body>
     <canvas id="canvas"></canvas>
@@ -71,9 +17,24 @@
             <svg class="icon" id="eraser" aria-hidden="true">
                 <use xlink:href="#icon-Eraser-Tool"></use>
             </svg>
-        <!-- <button id="eraser">橡皮擦</button>
-        <button id="brush">画笔</button> -->
     </div>
+    <ol class="colors">
+        <li class="black active" id="black">
+
+        </li>
+        <li class="red" id="red">
+
+        </li>
+        <li class="green" id="green">
+
+        </li>
+        <li class="yellow" id="yellow">
+
+        </li>
+        <li class="blue" id="blue">
+
+        </li>
+    </ol>
     <script src="./main.js"></script>
 </body>
 </html>
