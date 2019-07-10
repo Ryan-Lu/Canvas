@@ -12,9 +12,6 @@ var pageSize = function() {
     var pageHeight = document.documentElement.clientHeight
     canvas.width = pageWidth
     canvas.height = pageHeight
-    // 在每次初始化画板的时候将画板的底色设置为你想要的颜色
-    context.fillStyle = '#fff'; // 白色
-    context.fillRect(0, 0, canvas.width, canvas.height);
 }
 pageSize()
 
